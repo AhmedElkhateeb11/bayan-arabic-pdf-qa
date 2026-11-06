@@ -30,7 +30,7 @@ document they come from. Third-party images and logos inside the PDFs may have s
 | `unesco_mapping_report_AR` | SDG 4 policy mapping in Arab States | UNESCO Beirut | CC BY-SA 3.0 IGO | yes | [source](https://www.unesco.org/sites/default/files/medias/fichiers/2024/01/20231027_Mapping%20Report_AR_Final%20for%20print.pdf) |
 | `unesco_osce_guide_AR` | Addressing anti-Semitism through education: guidelines for policymakers (2019) | UNESCO/OSCE | CC BY-SA 3.0 IGO | yes | [source](https://odihr.osce.org/sites/default/files/f/documents/6/f/418325.pdf) |
 | `unesdoc_gem2017_summary_AR` | Accountability in education: GEM Report 2017/8 summary | UNESCO GEM Report | CC BY-SA 3.0 IGO | yes | [source](https://unesdoc.unesco.org/ark:/48223/pf0000259593_ara) |
-| `unesdoc_ai_ethics_rec_AR` | Recommendation on the Ethics of Artificial Intelligence (2021) | UNESCO | not stated in file or record | no (see note) | [source](https://unesdoc.unesco.org/ark:/48223/pf0000380455_ara) |
+| `unesdoc_ai_ethics_rec_AR` | Recommendation on the Ethics of Artificial Intelligence (2021) | UNESCO | not stated in this edition (see note) | yes | [source](https://unesdoc.unesco.org/ark:/48223/pf0000380455_ara) |
 
 Licence texts: [CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/),
 [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/),
@@ -40,10 +40,9 @@ academic, non-commercial project.
 
 **Note on `unesdoc_ai_ethics_rec_AR`.** The PDF we screened is UNESCO's 2021 programme-document edition
 of the *Recommendation on the Ethics of Artificial Intelligence* (SHS/BIO/REC-AIETHICS/2021), which states no
-licence. Its PDF is therefore **not** redistributed here; download it from the UNESDOC link above. The same text is
-published by UNESCO as SHS/BIO/PI/2021/1 under CC BY-NC-SA
-([UNESDOC record](https://unesdoc.unesco.org/ark:/48223/pf0000381137_ara)); its extracted passages are kept
-in `passages_v1.jsonl` on that basis, with attribution to UNESCO.
+licence. The same text is published by UNESCO as SHS/BIO/PI/2021/1 under CC BY-NC-SA
+([UNESDOC record](https://unesdoc.unesco.org/ark:/48223/pf0000381137_ara)). The PDF is included unmodified, with
+attribution to UNESCO, for non-commercial academic use; it is also freely available from the UNESDOC link above.
 
 Attribution for all documents: © the respective publisher (WHO, UNESCO, OSCE/ODIHR, WIPO, ITU), year as stated
 in each document. The views expressed in the documents are those of their authors and publishers.

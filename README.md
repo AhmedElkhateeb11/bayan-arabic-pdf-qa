@@ -4,7 +4,7 @@ Bayan answers Arabic questions from a fixed collection of Arabic PDF documents, 
 
 University NLP course project. Current stage: **Milestone 1 — dataset, EDA and preprocessing pipeline**.
 
-[Open the Milestone 1 notebook in Colab](https://colab.research.google.com/github/<YOUR-GITHUB-USERNAME>/bayan-arabic-pdf-qa/blob/main/notebooks/Bayan_Milestone1.ipynb)
+[Open the Milestone 1 notebook in Colab](https://colab.research.google.com/github/AhmedElkhateeb11/bayan-arabic-pdf-qa/blob/main/notebooks/Bayan_Milestone1.ipynb)
 
 ## Corpus v1 at a glance
 
@@ -25,7 +25,7 @@ Screening rule (pypdf 6.21.2): a page is kept if it has ≥ 40 Arabic words, ≥
 
 ```
 data/corpus_v1/
-  pdf/                    23 PDFs (one is not redistributed, see DATA_LICENSES.md)
+  pdf/                    the 24 accepted PDFs (licences in DATA_LICENSES.md)
   manifest_v1.csv         all 40 screened PDFs: source URL, licence, SHA-256, counts, decision and reason
   passages_v1.jsonl       6,729 passages: passage_id, file, pdf_page, words, exact_dup_of, text
   page_scores_v1.jsonl    page-level screening measures for all 6,033 screened pages

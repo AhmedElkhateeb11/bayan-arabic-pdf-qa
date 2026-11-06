@@ -1,15 +1,3 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
-# ---
-
 # %% [markdown]
 # # Bayan (بيان): Arabic PDF Question Answering with Retrieval-Augmented Generation
 # ## Milestone 1 — Problem definition, dataset, EDA and preprocessing pipeline
@@ -17,11 +5,9 @@
 # | | |
 # |---|---|
 # | Course | Natural Language Processing |
-# | Team | *[Member 1 — ID]*, *[Member 2 — ID]*, *[Member 3 — ID]* |
-# | Repository | `https://github.com/<YOUR-GITHUB-USERNAME>/bayan-arabic-pdf-qa` |
+# | Team | Ahmed ElKhateeb (23-101063), Ahmed Sherif (23-101272) |
+# | Repository | `https://github.com/AhmedElkhateeb11/bayan-arabic-pdf-qa` |
 # | Corpus | Bayan corpus v1 — 24 Arabic PDFs, 6,729 passages |
-#
-# **How to run:** open in Google Colab → *Runtime → Run all*. The notebook clones the repository (corpus + code), verifies every PDF by SHA-256, re-extracts the text directly from the PDFs (no OCR), and rebuilds the 6,729 passages before analysing them. Full run: about 3–5 minutes.
 
 # %% [markdown]
 # ## 1. Problem definition
@@ -71,7 +57,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import pypdf
 
-REPO_URL = "https://github.com/<YOUR-GITHUB-USERNAME>/bayan-arabic-pdf-qa.git"
+REPO_URL = "https://github.com/AhmedElkhateeb11/bayan-arabic-pdf-qa.git"
 
 def find_root():
     for c in [os.getcwd(), os.path.dirname(os.getcwd()), os.path.join(os.getcwd(), "bayan-arabic-pdf-qa")]:
@@ -142,7 +128,7 @@ for _, r in accepted.iterrows():
     rows.append((r.file, os.path.exists(p), os.path.exists(p) and sha256(p) == r.sha256))
 check = pd.DataFrame(rows, columns=["file", "pdf_in_repo", "sha256_ok"])
 print(f"{check.sha256_ok.sum()} of {len(check)} PDFs present and verified")
-check[~check.sha256_ok]  # documents whose PDF is not redistributed (see DATA_LICENSES.md)
+check[~check.sha256_ok]  # should be empty: every PDF present and unchanged
 
 # %% [markdown]
 # ### 3.2 Direct text extraction (pypdf, no OCR) and passage rebuild
@@ -466,7 +452,7 @@ for before, after in random.sample(samples, min(15, len(samples))):
     print(f"{before:>22}  →  {after}")
 
 # %% [markdown]
-# In this sample 14 of the 15 splits are correct; the error is the product name `روكفور` (Roquefort) split into two frequent words. Splitting is therefore kept in the clean view (it fixes far more than it breaks) and its effect on retrieval is measured as part of RQ2.
+# In this sample 14 of the 15 splits are correct; the error is the product name `روكفور` (Roquefort), split into two frequent words. A second sample drawn earlier had 15 of 15 correct. Splitting is therefore kept in the clean view (it fixes far more than it breaks) and its effect on retrieval is measured as part of RQ2.
 
 # %% [markdown]
 # ## 6. Output of the pipeline
@@ -505,6 +491,5 @@ P[["passage_id", "pdf_page", "clean_text", "retrieval_text", "tfidf_text"]].head
 # ## 9. Team contributions
 # | Member | Contribution |
 # |---|---|
-# | *[Name]* | *[e.g. problem definition, dataset screening]* |
-# | *[Name]* | *[e.g. EDA]* |
-# | *[Name]* | *[e.g. preprocessing pipeline, documentation]* |
+# | Ahmed ElKhateeb | Problem definition, dataset screening, EDA |
+# | Ahmed Sherif | Preprocessing pipeline, documentation |
