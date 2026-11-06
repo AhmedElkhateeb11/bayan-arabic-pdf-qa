@@ -45,10 +45,3 @@ jupyter notebook notebooks/Bayan_Milestone1.ipynb
 
 The notebook verifies every PDF by SHA-256, re-extracts the text, rebuilds all 6,729 passages (identical to `passages_v1.jsonl`), runs the EDA and writes `data/processed/passages_v1_processed.parquet` with three views per passage: `clean_text` (for reading and answering), `retrieval_text` (orthographically normalised) and `tfidf_text` (stop words removed, light-stemmed).
 
-## Team
-
-| Member | Role |
-|---|---|
-| *[Name]* | *[role]* |
-| *[Name]* | *[role]* |
-| *[Name]* | *[role]* |
